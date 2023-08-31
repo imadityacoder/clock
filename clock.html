@@ -1,0 +1,65 @@
+<DOCTYPE html>
+
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" 
+    content="IE=edge">
+        <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        body{
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+            color: aliceblue;
+        }
+        #time{
+            border-radius: 80px;
+            display:flex;
+            width:75%;
+            padding: 40px;
+            margin:100px auto;
+            text-align: center;
+            justify-content: center;
+            background: #000;
+            color: aliceblue;
+            opacity: 0.99;
+            font-size:180px;
+        }
+        .all{
+            width:25%;
+            font-size:140px;
+            padding: 38px;
+            margin: 28px;
+            border-radius:120px;
+            background-color: #1685a7a9;
+        }
+    
+    </style>
+    
+    <body>
+        <div id="time">
+            <div id="hour" class="all"></div>:
+            <div id="minute" class="all"></div>:
+            <div id="second" class="all"></div>
+        </div>
+    </body>
+    
+    <script>
+        setInterval(() => {
+            
+        let date = new Date()
+        let h = date.getHours()
+        let m = date.getMinutes()
+        let s = date.getSeconds()
+        
+        let hour = document.getElementById("hour").innerHTML= h
+        let minute = document.getElementById("minute").innerHTML= m
+        let second = document.getElementById("second").innerHTML= s
+        }, 100);
+        </script>
+    </html>
